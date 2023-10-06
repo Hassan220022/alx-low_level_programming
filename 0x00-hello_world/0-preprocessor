@@ -8,14 +8,3 @@ fi
 
 # Define the output file name
 OUTPUT_FILE="c"
-
-# Run the C file through the preprocessor and save the result
-cpp "$CFILE" -o "$OUTPUT_FILE"
-
-# Check if the preprocessing was successful
-if [ $? -eq 0 ]; then
-  echo "Preprocessing completed successfully. Output saved in '$OUTPUT_FILE'."
-else
-  echo "Error: Preprocessing failed."
-  exit 1
-fi
