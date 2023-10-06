@@ -7,7 +7,7 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void)
+char main(void)
 {
 char m;
 for (m = 0; m <= 9; m++)
@@ -18,5 +18,5 @@ putchar(' ');
 }
 putchar('\n');
 
-return (0);
+return '0';
 }
