@@ -1,15 +1,2 @@
 #!/bin/bash
-
-# Check if the CFILE variable is set
-if [ -z "$CFILE" ]; then
-  echo "Please set the CFILE variable to the name of your C file."
-  exit 1
-fi
-
-# Generate the output file name with a .s extension
-OUTPUT_FILE="${CFILE%.c}.s"
-
-# Compile the C file to generate the assembly code (Intel syntax)
-gcc -S -masm=intel "$CFILE" -o "$OUTPUT_FILE"
-
-echo "Assembly code generated and saved in $OUTPUT_FILE"
+gcc -S -masm=intel "$CFILE"
