@@ -2,10 +2,11 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main()
+int main(void)
 {
-srand(time(NULL));
-int random_number = rand()-RAND_MAX;
+int random_number;
+srand(time(0));
+random_number= rand()-RAND_MAX;
 if(random_number > 0)
 {
 printf("%d positive number",random_number);
