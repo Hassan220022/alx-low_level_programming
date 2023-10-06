@@ -6,7 +6,7 @@ int main(void)
 {
 int random_number;
 srand(time(0));
-random_number= rand()-RAND_MAX;
+random_number= rand()-RAND_MAX/2;
 if(random_number > 0)
 {
 printf("%d positive number",random_number);
