@@ -5,9 +5,8 @@
  *
  * Description: This function prints the lowercase alphabet.
  *
- * Return: Always 0 (Success)
  */
-char main(void)
+void main(void)
 {
 char m;
 for (m = 0; m <= 9; m++)
@@ -18,5 +17,4 @@ putchar(' ');
 }
 putchar('\n');
 
-return '0';
 }
