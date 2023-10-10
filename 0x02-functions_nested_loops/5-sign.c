@@ -9,7 +9,7 @@
  */
 int print_sign(int value)
 {
-if (value = 0)
+if (value == 0)
 {
 return (0);
 }
