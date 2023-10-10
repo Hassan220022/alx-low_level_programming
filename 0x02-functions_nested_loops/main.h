@@ -1,7 +1,6 @@
-#ifndef MAIN_H
-#define MAIN_H
 
 /* Function prototype */
-void print_hello(void);
-
-#endif /* MAIN_H */
+void print_hello()
+{
+   printf("_putchar\n");
+}
