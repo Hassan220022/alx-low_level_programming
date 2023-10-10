@@ -1,9 +1,12 @@
 #include <stdio.h>
+#include "main.h"
 /**
- * print_hello - This function prints "Hello, Betty!" to the standard output.
+ * main - Entry point of the program.
+ *
+ * Return: Always 0 (success).
  */
 int main(void)
 {
-   printf("_putchar\n");
+   print_hello();
    return (0);
 }
