@@ -11,7 +11,7 @@ unsigned long int a = 1, b = 2, next;
 int i;
 
 printf("%lu, %lu", a, b);
-for (i = 3; i <= 94; i++)
+for (i = 3; i <= 92; i++)
 {
 next = a + b;
 printf(", %lu", next);
