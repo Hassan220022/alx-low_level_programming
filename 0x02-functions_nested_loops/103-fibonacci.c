@@ -8,15 +8,16 @@
  */
 int main(void) 
 {
-int sum = 0, first = 1, second = 2;
+int next , first = 1, second = 2 ,sum =0;
 int i;
 
 for (i = 3; second <= max; i++)
 {
 if (second % 2 == 0)
-sum = first + second;
+sum += first;
+next = first + second;
 first = second;
-second = sum;
+second = next;
 }
 printf("%d\n", sum);
 return (0);
