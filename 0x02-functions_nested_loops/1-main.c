@@ -1,21 +1,10 @@
 #include "main.h"
-
-/**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-int main(void)
+/* Function prototype */
+void print_hello(void)
 {
-
-_putchar('_');
-_putchar('p');
-_putchar('u');
-_putchar('t');
-_putchar('c');
-_putchar('h');
-_putchar('a');
-_putchar('r');
-
-return (0);
+_putchar('H');
+_putchar('o');
+_putchar('l');
+_putchar('l');
+_putchar('o');
 }
