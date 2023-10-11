@@ -4,7 +4,7 @@
 int main(void)
 {
     unsigned long int a = 1, b = 2, next;
-    unsigned int divisor = Base;
+    unsigned long int divisor = Base;  // Change the data type to unsigned long int
     int i;
 
     printf("%lu, %lu", a, b);
@@ -20,7 +20,7 @@ int main(void)
         while ((a + b) / divisor > divisor)
         {
             divisor *= Base;
-            printf(", %u%u", (a + b) / divisor, (a + b) % divisor);
+            printf(", %lu%lu", (a + b) / divisor, (a + b) % divisor);
         }
     }
     printf("\n");
