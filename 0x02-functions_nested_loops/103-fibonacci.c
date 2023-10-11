@@ -6,7 +6,7 @@
  *
  * Return: Always 0.
  */
-int main(void) 
+int main(void)
 {
 int next;
 int first = 1, second = 2, sum = 0;
