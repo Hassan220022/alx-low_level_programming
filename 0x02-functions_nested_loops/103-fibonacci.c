@@ -9,7 +9,7 @@
 int main(void) 
 {
 int next;
-int first = 1, second = 2 ,sum = 0;
+int first = 1, second = 2 , sum = 0;
 
 while (first <= max)
 {
