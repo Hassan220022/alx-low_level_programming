@@ -13,15 +13,10 @@ for (j = 0; j <= 9; j++)
 {
 value = (i * j);
 if (j > 0)
-{
 _putchar(',');
-_putchar(' ');
-}
 if (value < 10)
 _putchar(' ');
-else
-_putchar((value / 10) + '0');
-_putchar((value % 10) + '0');
+_putchar(value + '0');
 }
 _putchar('\n');
 }
