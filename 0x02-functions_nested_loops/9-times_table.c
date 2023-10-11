@@ -25,6 +25,7 @@ _putchar((value % 10) + '0');
 _putchar(',');
 _putchar(' ');
 }
+}
 _putchar('$');
 _putchar('\n');
 }
