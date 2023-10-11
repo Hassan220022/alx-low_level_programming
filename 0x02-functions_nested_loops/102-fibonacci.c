@@ -9,9 +9,9 @@
 int main(void)
 {
 int sum = 0;
-int first = 1, second = 2;
+int first = 0, second = 1;
 int i;
-for (i = 3; i<50;i++)
+for (i = 0; i<50;i++)
 {
 sum = first + second;
 first = second;
