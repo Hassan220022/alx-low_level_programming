@@ -6,17 +6,17 @@
  */
 int positive_or_negative(int value)
 {
-      if (value > 0)
-      {
-         printf("%d is positive\n", value);
-      }
-      else if (value < 0)
-      {
-         printf("%d is negative\n", value);
-      }
-      else
-      {
-         printf("%d is zero\n", value);
-      }
-      return (0);
+if (value > 0)
+{
+printf("%d is positive\n", value);
+}
+else if (value < 0)
+{
+printf("%d is negative\n", value);
+}
+else
+{
+printf("%d is zero\n", value);
+}
+return (0);
 }
