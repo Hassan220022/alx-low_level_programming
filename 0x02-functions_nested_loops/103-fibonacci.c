@@ -10,9 +10,9 @@ int main(void)
 {
 int next , first = 1, second = 2 ,sum =0;
 
-while (second <= max)
+while (first <= max)
 {
-if (second % 2 == 0)
+if (first % 2 == 0)
 sum += first;
 next = first + second;
 first = second;
