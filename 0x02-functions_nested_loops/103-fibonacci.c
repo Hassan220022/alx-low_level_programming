@@ -8,7 +8,6 @@
  */
 int main(void) 
 {
-   
 int next;
 int first = 1, second = 2, sum = 0;
 
@@ -21,5 +20,6 @@ first = second;
 second = next;
 }
 printf("%d\n", sum);
+
 return (0);
 }
