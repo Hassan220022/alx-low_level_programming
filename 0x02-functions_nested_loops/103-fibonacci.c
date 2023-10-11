@@ -1,0 +1,22 @@
+#include <stdio.h>
+# define max 4000000
+
+/**
+ * main - Prints the sum of all even Fibonacci numbers up to 4,000,000.
+ *
+ * Return: Always 0.
+ */
+int main(void) 
+{
+int long sum = 0, first = 0, second = 1;
+int i;
+
+for (i = 1; sum <= max; i++)
+{
+if (second % 2 == 0)
+sum = first + second;
+first = second;
+second = sum;
+}
+return (0);
+}
