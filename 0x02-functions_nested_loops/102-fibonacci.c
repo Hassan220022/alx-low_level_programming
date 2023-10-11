@@ -16,9 +16,9 @@ sum = first + second;
 first = second;
 second = sum;
 if (i != 50)
-printf("%d, ", sum);
+printf("%ld, ", sum);
 else
-printf("%d\n", sum);
+printf("%ld\n", sum);
 }
 return (0);
 }
