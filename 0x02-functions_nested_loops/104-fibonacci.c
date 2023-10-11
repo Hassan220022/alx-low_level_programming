@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    unsigned int long long a, b, next;
+    unsigned int long a, b, next;
     int n;
 
     a = 1;
