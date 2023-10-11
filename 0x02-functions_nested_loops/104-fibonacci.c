@@ -2,7 +2,7 @@
 
 int main(void)
 {
-int long first = 0, second = 1, sum = 0;
+unsigned int long first = 0, second = 1, sum = 0;
 int i;
 
 for (i = 0; i < 98; i++)
