@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * @brief 
- * 
- * @return int 
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
