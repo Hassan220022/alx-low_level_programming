@@ -12,7 +12,6 @@ for (i = 0; i <= 9; i++)
 for (j = 0; j <= 9; j++)
 {
 value = (i * j);
-
 if (j > 9)
 {
 _putchar(',');
@@ -37,6 +36,7 @@ else
 {
 if (j != 9)
 {
+_putchar(' ');
 _putchar(value + '0');
 _putchar(',');
 _putchar(' ');
