@@ -4,7 +4,7 @@
  * main - tests function that prints if integer is positive or negative
  * Return: 0
  */
-int positive_or_negative(int value)
+void positive_or_negative(int value)
 {
 if (value > 0)
 {
