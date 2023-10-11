@@ -24,7 +24,7 @@ for(i = 0; i < 6; i++)
 while ((a + b) / divisor > divisor ) 
 {
 divisor *= Base;
-printf(", %u\t%u", (a + b) / divisor, (a + b) % divisor);
+printf(", %u%u", (a + b) / divisor, (a + b) % divisor);
 }
 printf("\n");
 return (0);
