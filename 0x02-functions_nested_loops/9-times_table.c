@@ -13,6 +13,7 @@ _putchar((i * j) + '0');
 _putchar(',');
 _putchar(' ');
 }
+_putchar('$');
 _putchar('\n');
 }
 }
