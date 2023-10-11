@@ -4,7 +4,7 @@
 int main(void)
 {
     unsigned long int a = 1, b = 2, next;
-    unsigned long int divisor = Base;  // Change the data type to unsigned long int
+    unsigned long int divisor = Base; 
     int i;
 
     printf("%lu, %lu", a, b);
