@@ -1,20 +1,21 @@
 #include <stdio.h>
 
 int main() {
-unsigned long long a, b, next;
-int n;
-a = 1;
-b = 2;
+    unsigned long long a, b, next;
+    int n;
 
-printf("%llu, %llu", a, b);
+    a = 1;
+    b = 2;
 
-for (n = 2; n < 98; n++) {
-next = a + b;
-printf(", %llu", next);
-a = b;
-b = next;
-}
+    printf("%llu, %llu", a, b);
 
-printf("\n");
-return 0;
+    for (n = 2; n < 98; n++) {
+        next = a + b;
+        printf(", %llu", next);
+        a = b;
+        b = next;
+    }
+
+    printf("\n");
+    return 0;
 }
