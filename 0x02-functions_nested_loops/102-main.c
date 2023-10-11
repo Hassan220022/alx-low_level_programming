@@ -8,6 +8,6 @@
  */
 int main()
 {
-_start():
+_start();
 return 0;
 }
