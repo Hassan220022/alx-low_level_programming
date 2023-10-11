@@ -8,7 +8,8 @@
  */
 int main(void) 
 {
-int next, first = 1, second = 2 ,sum =0;
+int next;
+int first = 1, second = 2 ,sum = 0;
 
 while (first <= max)
 {
