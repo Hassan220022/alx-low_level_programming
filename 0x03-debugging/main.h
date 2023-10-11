@@ -4,6 +4,7 @@
 #include <stdio.h>
 
 /* Function prototypes */
+
 void positive_or_negative(int value);
 
 #endif /* MAIN_H */
