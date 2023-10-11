@@ -1,4 +1,3 @@
-#include <unistd.h>
 
 /**
  * _putchar - Writes a character to the standard output (stdout)
