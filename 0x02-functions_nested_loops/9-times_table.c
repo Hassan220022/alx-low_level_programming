@@ -43,6 +43,7 @@ _putchar(' ');
 }
 else
 {
+_putchar(' ');
 _putchar(value + '0');
 }
 }
