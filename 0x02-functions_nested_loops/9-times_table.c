@@ -5,13 +5,23 @@
  */
 void times_table(void)
 {
-int i,j;
+int i,j,value;
 
 for (i = 0; i <= 9; i++)
 {
 for (j = 0; j <= 9; j++)
 {
-_putchar((i * j) + '0');
+value = (i * j);
+if (j <= 9)
+{
+_putchar(value + '0');
+_putchar(',');
+_putchar(' ');
+}
+else if (value >= 10)
+{
+_putchar((value / 10) + '0');
+_putchar((value % 10) + '0');
 _putchar(',');
 _putchar(' ');
 }
