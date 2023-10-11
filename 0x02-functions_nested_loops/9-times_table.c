@@ -5,9 +5,11 @@
  */
 void times_table(void)
 {
-for (int i = 0; i <= 9; i++)
+int i,j;
+
+for (i = 0; i <= 9; i++)
 {
-for (int j = 0; j <= 9; j++)
+for (j = 0; j <= 9; j++)
 {
 _putchar((i * j) + '0');
 _putchar(',');
