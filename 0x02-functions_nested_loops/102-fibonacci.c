@@ -15,7 +15,7 @@ for (i = 0; i<50;i++)
 sum = first + second;
 first = second;
 second = sum;
-if (i != 50)
+if (i != 49)
 printf("%ld, ", sum);
 else
 printf("%ld\n", sum);
