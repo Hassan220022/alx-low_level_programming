@@ -1,12 +1,12 @@
-#include "main.h"
-#include <unistd.h>
+#include <stdio.h>
 
 /**
- * main - Entry point of the program.
- *
- * Return: Always 0 (success).
+ * @brief 
+ * 
+ * @return int 
  */
-int _putchar(char c) 
+int main(void)
 {
-return write(1, &c, 1);
+    printf("_putchar\n");
+    return (0);
 }
