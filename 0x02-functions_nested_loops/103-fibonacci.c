@@ -8,7 +8,7 @@
  */
 int main(void) 
 {
-int long sum = 0, first = 1, second = 2;
+int sum = 0, first = 1, second = 2;
 int i;
 
 for (i = 3; second <= max; i++)
@@ -18,6 +18,6 @@ sum = first + second;
 first = second;
 second = sum;
 }
-printf("%ld\n", sum);
+printf("%d\n", sum);
 return (0);
 }
