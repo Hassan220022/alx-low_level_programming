@@ -18,5 +18,4 @@ else
 {
 printf("%d is zero\n", value);
 }
-return (0);
 }
