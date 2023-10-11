@@ -8,6 +8,7 @@
 int main(void)
 {
 unsigned long int a = 1, b = 2, next;
+unsigned int divisor = Base;
 int i;
 
 printf("%lu, %lu", a, b);
@@ -17,6 +18,13 @@ next = a + b;
 printf(", %lu", next);
 a = b;
 b = next;
+}
+for(i = 0; i < 6; i++)
+{
+while ((a + b) / divisor > divisor ) 
+{
+divisor *= Base;
+printf(", %u\t%u", (a + b) / divisor, (a + b) % divisor);
 }
 printf("\n");
 return (0);
