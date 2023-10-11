@@ -1,19 +1,20 @@
 #include <stdio.h>
 
-int main(void)
-{
-unsigned long long first = 1, second = 2, sum;
-int i;
+int main() {
+unsigned long long a, b, next;
+int n;
+a = 1;
+b = 2;
 
-for (i = 2; i < 98; i++)
-{
-sum = first + second;
-first = second;
-second = sum;
-if (i != 98)
-printf("%llu, ", sum);
-else
-printf("%llu\n", sum);
+printf("%llu, %llu", a, b);
+
+for (n = 2; n < 98; n++) {
+next = a + b;
+printf(", %llu", next);
+a = b;
+b = next;
 }
+
+printf("\n");
 return 0;
 }
