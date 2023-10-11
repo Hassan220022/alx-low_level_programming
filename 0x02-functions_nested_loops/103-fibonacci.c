@@ -9,17 +9,26 @@
 int main(void)
 {
 int next;
+int i;
 int first = 1, second = 2, sum = 0;
 
-while (first <= max)
+for (i = first; first <= 98; i++)
 {
-if (first % 2 == 0)
-sum += first;
+if (i != 98)
+{
 next = first + second;
 first = second;
 second = next;
+printf("%d, ", next);
 }
-printf("%d\n", sum);
+else
+{
+next = first + second;
+first = second;
+second = next;
+printf("%d", next);
+}
+}
 
 return (0);
 }
