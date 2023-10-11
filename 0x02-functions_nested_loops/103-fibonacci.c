@@ -19,6 +19,5 @@ first = second;
 second = sum;
 }
 printf("%ld\n", sum);
-
 return (0);
 }
