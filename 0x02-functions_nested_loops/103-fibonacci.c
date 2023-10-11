@@ -11,7 +11,7 @@ int main(void)
 int long sum = 0, first = 1, second = 2;
 int i;
 
-for (i = 3; sum <= max; i++)
+for (i = 3; second <= max; i++)
 {
 if (second % 2 == 0)
 sum = first + second;
