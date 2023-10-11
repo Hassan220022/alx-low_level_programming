@@ -7,11 +7,11 @@ int main() {
     a = 1;
     b = 2;
 
-    printf("%llu, %llu", a, b);
+    printf("%ld, %ld", a, b);
 
     for (n = 2; n < 100; n++) {
         next = a + b;
-        printf(", %llu", next);
+        printf(", %ld", next);
         a = b;
         b = next;
     }
