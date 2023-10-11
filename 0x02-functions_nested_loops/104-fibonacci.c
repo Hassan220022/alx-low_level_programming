@@ -8,7 +8,6 @@
 int main(void)
 {
 unsigned long int a = 1, b = 2, next;
-// unsigned int divisor = Base;
 int i;
 
 printf("%lu, %lu", a, b);
