@@ -7,23 +7,23 @@
  */
 int main(void)
 {
-    long int n = 612852475143;
-    int i;
+long int n = 612852475143;
+int i;
 
-    while (n % 2 == 0)
-    {
-        n /= 2;
-    }
+while (n % 2 == 0)
+{
+n /= 2;
+}
 
-    for (i = 3; i <= n; i += 2)
-    {
-        while (n % i == 0 && n != i)
-        {
-            n /= i;
-        }
-    }
+for (i = 3; i <= n; i += 2)
+{
+while (n % i == 0 && n != i)
+{
+n /= i;
+}
+}
 
-    printf("%ld\n", n);
+printf("%ld\n", n);
 
-    return 0;
+return 0;
 }
