@@ -6,12 +6,15 @@
  */
 void print_line(int n)
 {
+     int i;
+
      if (n <= 0) 
      {
           /* If n is 0 or less, print only a newline character */
           _putchar('\n');
-     } else {
-          int i;
+     } 
+     else 
+     {
           for (i = 0; i < n; i++) 
           {
                _putchar('_');
