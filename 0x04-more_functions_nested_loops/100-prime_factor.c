@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - entry point
@@ -7,23 +8,13 @@
  */
 int main(void)
 {
-long number = 612852475143;
-int inc;
-while (inc++ < number / 2)
-{
-if (number % inc == 0)
-{
-number /= 2;
-continue;
-}
+	unsigned long int i, n = 612852475143;
 
-for (inc = 3; inc < number / 2; inc += 2)
-{
-if (number % inc == 0)
-number /= inc;
-
-}
-}
-printf("%ld\n", number);
-return (0);
+	for (i = 3; i < 782849; i = i + 2)
+	{
+		while ((n % i == 0) && (n != i))
+			n = n / i;
+	}
+	printf("%lu\n", n);
+	return (0);
 }
