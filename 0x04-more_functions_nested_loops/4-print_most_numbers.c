@@ -1,9 +1,7 @@
 #include "main.h"
 
 /**
- * _strcat - concatenates two strings
- * @dest: string to be appended to
- * @src: string to append
+ *print_most_numbers - prints
  * Return: pointer to dest
  */
 void print_most_numbers(void)
