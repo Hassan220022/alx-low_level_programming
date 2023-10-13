@@ -7,23 +7,23 @@
  */
 int main(void)
 {
-long int n = 612852475143;
-int i;
-
-while (n % 2 == 0)
+long number = 612852475143;
+int inc;
+while (inc++ < number / 2)
 {
-n /= 2;
+if (number % inc == 0)
+{
+number /= 2;
+continue;
 }
 
-for (i = 3; i <= n; i += 2)
+for (inc = 3; inc < number / 2; inc += 2)
 {
-while (n % i == 0 && n != i)
-{
-n /= i;
+if (number % inc == 0)
+number /= inc;
+
 }
 }
-
-printf("%ld\n", n);
-
-return 0;
+printf("%ld\n", number);
+return (0);
 }
