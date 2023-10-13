@@ -1,10 +1,8 @@
 #include "main.h"
 
 /**
- * _strcat - concatenates two strings
- * @dest: string to be appended to
- * @src: string to append
- * Return: pointer to dest
+ * more_numbers - nmbr fct
+ * Return: no return
  */
 void more_numbers(void)
 {
