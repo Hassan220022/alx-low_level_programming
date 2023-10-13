@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * print_square - printing square
+ * @size: input variable
+ *
+ * Return: void
+ */
 void print_square(int size)
 {
      int i, j;
