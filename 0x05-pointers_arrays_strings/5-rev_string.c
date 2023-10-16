@@ -4,20 +4,22 @@
 #include "swap.c"
 
 /**
- * rev_string - reverses a string
- * @s: string to be reversed
- *
- * Return: void
- */
+* rev_string - reverses a string
+* @s: string to be reversed
+*
+* Return: void
+*/
 void rev_string(char *s)
 {
-	int len, i;
+	int len = _strlen(s);
 
-	len = _strlen(s);
+	int i, y;
 
-	for (i = 0; i < len - 1; i++)
+	y = len - 1;
+
+	for (i = 0; i < y; i++, y--)
 	{
-		swap(&s[i], &s[len - 1 - i]);
+		swap(&s[i], &s[y]);
 	}
 }
 
