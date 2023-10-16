@@ -1,5 +1,6 @@
 #include "main.h"
 #include "_putchar.c"
+#include "2-strlen.c"
 /**
 * print_rev - prints a string, in reverse, followed by a new line.
 * @s: string to be printed.
