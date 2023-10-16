@@ -1,6 +1,4 @@
 #include "main.h"
-#include "2-strlen.c"
-
 /**
 * _atoi - Converts a string to an integer.
 * @s: The string to be converted.
@@ -11,7 +9,7 @@ int _atoi(char *s)
 {
 	int sign = 1;
 
-	int num = 0;
+	long long num = 0;
 
 	int i = 0;
 
@@ -24,6 +22,15 @@ int _atoi(char *s)
 		else if (s[i] >= '0' && s[i] <= '9')
 		{
 			num = num * 10 + (s[i] - '0');
+
+			if (sign * num > INT_MAX)
+			{
+				return (INT_MAX);
+			}
+			else if (sign * num < INT_MIN)
+			{
+				return (INT_MIN);
+			}
 		}
 		else if (num > 0)
 		{
