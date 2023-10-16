@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include "_putchar.c"
 /**
 * print_rev - prints a string, in reverse, followed by a new line.
 * @s: string to be printed.
@@ -8,11 +8,11 @@
 */
 void print_rev(char *s)
 {
-int len = 0, index = 0;
-len = _strlen(s);
+	int i = 0;
 
-for (index = len - 1; index >= 0; index--)
-_putchar(s[index]);
-
-_putchar('\n');
+	i = _strlen(s);
+	i--;
+	for (; i >= 0; i--)
+		_putchar(s[i]);
+	_putchar('\n');
 }
