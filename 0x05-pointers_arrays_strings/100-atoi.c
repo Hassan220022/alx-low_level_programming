@@ -10,7 +10,7 @@ int _atoi(char *s)
 {
 	int sign = 1;
 
-	long long num = 0;
+	long int num = 0;
 
 	int i = 0;
 
@@ -24,14 +24,6 @@ int _atoi(char *s)
 		{
 			num = num * 10 + (s[i] - '0');
 
-			if (sign * num > INT_MAX)
-			{
-				return (INT_MAX);
-			}
-			else if (sign * num < INT_MIN)
-			{
-				return (INT_MIN);
-			}
 		}
 		else if (num > 0)
 		{
