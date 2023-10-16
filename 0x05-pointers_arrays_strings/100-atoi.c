@@ -2,27 +2,36 @@
 #include "2-strlen.c"
 
 /**
-* _atoi - changes a string to an int
-* @s: the string to be changed
+* _atoi - Converts a string to an integer.
+* @s: The string to be converted.
 *
-* Return: the converted int
+* Return: The converted integer.
 */
 int _atoi(char *s)
 {
-     int sign = 1;
-     unsigned int sum = 0;
-     
-     while (*s != '\0')
-     {
-		if (*s == '-')
-               sign *= -1;
+	int sign = 1;
 
-          else if (*s >= '0' && *s <= '9')
-               sum = sum * 10 + (*s - '0');
+	int num = 0;
 
-          else if (sum > 0)
-               break;
-          s++;
-     }
-     return (sum * sign);
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+		if (s[i] == '-')
+		{
+			sign = -sign;
+		}
+		else if (s[i] >= '0' && s[i] <= '9')
+		{
+			num = num * 10 + (s[i] - '0');
+		}
+		else if (num > 0)
+		{
+			break;
+		}
+
+		i++;
+	}
+
+	return (sign * num);
 }
