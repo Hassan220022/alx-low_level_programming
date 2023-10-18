@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include "2-strlen.c"
 /**
 * _strcat - concatenates two strings
 * @dest: string to be appended to
@@ -9,16 +9,17 @@
 */
 char *_strcat(char *dest, char *src)
 {
-	int i = 0, j = 0;
+	int initial_end;
+	int j;
 
-	while (dest[i] != '\0')
-		i++;
-	while (src[i] != '\0')
+	initial_end = _strlen(dest);
+	j = 0;
+	while (src[j] != '\0')
 	{
-		dest[i] = src[j];
-		i++;
+		dest[initial_end + j] = src[j];
 		j++;
 	}
-	dest[i] = '\0';
+	dest[initial_end + j] = '\0';
+
 	return (dest);
 }
