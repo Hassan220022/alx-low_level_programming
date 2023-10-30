@@ -29,7 +29,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	strcpy(arr, s1);
 	arr[len_s1] = ' ';
-	for (i = len_s1 + 1, j = 0; i < len_s1 + len_s2 + 1; i++, j++)
+	for (i = len_s1, j = 0; i < len_s1 + len_s2; i++, j++)
 	{
 		arr[i] = s2[j];
 	}
