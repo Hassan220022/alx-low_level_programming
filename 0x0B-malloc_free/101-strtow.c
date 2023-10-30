@@ -1,8 +1,14 @@
-#include <stdlib.h>
-#include <string.h>
+#include "main.h"
 
+/**
+ * strtow - splits a string into words
+ * @str: string to split
+ *
+ * Return: pointer to array of strings, or NULL if error
+ */
 char **strtow(char *str)
 {
+     char **arr;
      int letters = 0, index = 0, i = 0, j = 0;
     if (str == NULL || *str == '\0')
     {
@@ -17,7 +23,7 @@ char **strtow(char *str)
         }
     }
 
-    char **arr = malloc((words + 1) * sizeof(char *));
+    *arr = malloc((words + 1) * sizeof(char *));
     if (arr == NULL)
     {
         return NULL;
