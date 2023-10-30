@@ -13,7 +13,7 @@ char *_strdup(char *str)
 
 	size_t len_str = strlen(str);
 
-	arr = (char *)malloc(sizeof(char) * len_str);
+	arr = (char *)malloc(sizeof(char) * (len_str + 1));
 
 	strcpy(arr, str);
 
