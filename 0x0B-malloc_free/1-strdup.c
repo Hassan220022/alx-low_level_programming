@@ -9,21 +9,18 @@
 */
 char *_strdup(char *str)
 {
+	char *arr;
+	int len_str;
+
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-	char *arr = NULL;
-
-	size_t len_str = strlen(str);
-
-
-
-	arr = (char *)malloc(sizeof(char) * (len_str + 1));
+	len_str = strlen(str);
+	arr = (char *)malloc((len_str + 1));
 	if (arr == NULL)
 	{
-		printf("failed to allocate memory\n");
 		return (NULL);
 	}
 
