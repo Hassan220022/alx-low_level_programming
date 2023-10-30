@@ -3,13 +3,14 @@
 
 char **strtow(char *str)
 {
+     int letters = 0, index = 0, i = 0, j = 0;
     if (str == NULL || *str == '\0')
     {
         return NULL;
     }
 
     int words = 0;
-    for (int i = 0; str[i]; i++) {
+    for (i = 0; str[i]; i++) {
         if ((i == 0 || str[i - 1] == ' ') && str[i] != ' ')
         {
             words++;
@@ -17,32 +18,37 @@ char **strtow(char *str)
     }
 
     char **arr = malloc((words + 1) * sizeof(char *));
-    if (arr == NULL) {
+    if (arr == NULL)
+    {
         return NULL;
     }
 
-    int index = 0;
-    for (int i = 0; i < words; i++) {
-        while (str[index] == ' ') {
+    for (i = 0; i < words; i++)
+    {
+        while (str[index] == ' ')
+        {
             index++;
         }
 
-        int letters = 0;
-        while (str[index + letters] != ' ' && str[index + letters]) {
+          letters = 0;
+        while (str[index + letters] != ' ' && str[index + letters])
+        {
             letters++;
         }
 
         arr[i] = malloc((letters + 1) * sizeof(char));
-        if (arr[i] == NULL) {
-            for (int j = 0; j < i; j++) {
-                free(arr[j]);
+        if (arr[i] == NULL)
+        {
+            for (j = 0; j < i; j++) {
+               free(arr[j]);
             }
             free(arr);
             return NULL;
         }
 
-        for (int j = 0; j < letters; j++) {
-            arr[i][j] = str[index + j];
+        for (j = 0; j < letters; j++)
+        {
+          arr[i][j] = str[index + j];
         }
         arr[i][letters] = '\0';
 
