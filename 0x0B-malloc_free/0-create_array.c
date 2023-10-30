@@ -10,24 +10,28 @@
 */
 char *create_array(unsigned int size, char c)
 {
+	unsigned int i;
+
+	char *arr = NULL;
+
 	if (size == 0)
 	{
 		return (NULL);
 	}
-	else
+
+	*arr = (char *)malloc(sizeof(char) * size);
+
+	if (arr == NULL)
 	{
-		char *arr = malloc(sizeof(int) * size);
-
-		if (arr == NULL)
-		{
-		printf("Error: could not allocate memory\n");
-		return (1);
-		}
-
-		unsigned int i;
-
-		for (i = 0; i < size; i++)
-			arr[i] = c;
-		return (arr);
+		printf("failed to allocate memory\n");
+		return (NULL);
 	}
+
+	for (i = 0; i < size; i++)
+
+	{
+		arr[i] = c;
+	}
+
+	return (arr);
 }
