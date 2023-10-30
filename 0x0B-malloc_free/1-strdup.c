@@ -18,7 +18,7 @@ char *_strdup(char *str)
 		len_str++;
 		str++;
 	}
-	arr = (char *)malloc(sizeof(char) * (len_str - 1));
+	arr = (char *)malloc(sizeof(char) * len_str);
 
 	while (str[i] != '\0')
 	{
