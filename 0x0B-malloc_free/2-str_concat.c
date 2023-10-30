@@ -13,9 +13,14 @@ char *str_concat(char *s1, char *s2)
 
 	char *arr;
 
-	if (s1 == NULL && s2 == NULL)
+	if (s1 == NULL)
 	{
-		return (NULL);
+		s1 = "";
+	}
+
+	if (s2 == NULL)
+	{
+		s2 = "";
 	}
 
 	len_s1 = strlen(s1);
@@ -28,10 +33,6 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 	strcpy(arr, s1);
-	arr[len_s1] = ' ';
-	for (i = len_s1, j = 0; i < len_s1 + len_s2; i++, j++)
-	{
-		arr[i] = s2[j];
-	}
+	strcpy(arr + len_s1, s2);
 	return (arr);
 }
