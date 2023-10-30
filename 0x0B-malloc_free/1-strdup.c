@@ -11,19 +11,13 @@ char *_strdup(char *str)
 {
 	char *arr = NULL;
 
-	int len_str = 0, i = 0;
+	int i = 0;
 
-	while (*str != '\0')
-	{
-		len_str++;
-		str++;
-	}
+	size_t len_str = strlen(str);
+
 	arr = (char *)malloc(sizeof(char) * len_str);
 
-	while (str[i] != '\0')
-	{
-		arr[i] = str[i];
-		i++;
-	}
+	strcpy(arr, str);
+
 	return (arr);
 }
