@@ -2,34 +2,43 @@
 
 /**
  * string_nconcat - concatenates two strings
- * @s1: first string
- * @s2: second string
- * @n: number of bytes of s2 to concatenate to s1
- *
- * Return: pointer to new string, NULL if it fails
+ * @s1: destination string
+ * @s2: source string
+ * @n: number of characters to be copied
+ * Return: copied
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len1, len2;
+	unsigned int s1_len = 0, s2_len = 0, i;
+	char *s;
 
-	char *ptr;
-
+	/* if NULL is passed, treat as an empty string */
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
-	len1 = strlen(s1);
-	len2 = strlen(s2);
+	/* While at index 0 */
+	while (s1[s1_len] != '\0')
+		s1_len++;
+	while (s2[s2_len] != '\0')
+		s2_len++;
 
-	if (n >= len2)
-		n = len2;
+	if (n >= s2_len)
+		n = s2_len;
 
-	ptr = malloc(sizeof(char) * (len1 + n + 1));
-	if (ptr == NULL)
+	/* Memory allocation */
+	s = malloc(sizeof(char) * n + s1_len + 1);
+	if (s == NULL)
 		return (NULL);
-	strcpy(ptr, s1);
-	strcpy(ptr + len1, s2);
-	ptr[len1 + n] = '\0';
-	return (ptr);
+
+	for (i = 0; i < s1_len; i++)
+		s[i] = s1[i];
+
+	for (i = 0; i < n; i++)
+		s[i + s1_len] = s2[i];
+
+	s[i + s1_len] = '\0';
+
+	return (s);
 }
