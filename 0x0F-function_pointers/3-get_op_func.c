@@ -9,11 +9,6 @@
 */
 int (*get_op_func(char *s))(int, int)
 {
-	int i;
-
-	if (s == NULL)
-		return (NULL);
-
 	op_t ops[] = {
 		{"+", op_add},
 		{"-", op_sub},
@@ -22,6 +17,10 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
+	int i;
+
+	if (s == NULL)
+		return (NULL);
 
 	for (i = 0; ops[i].op != NULL; i++)
 	{
