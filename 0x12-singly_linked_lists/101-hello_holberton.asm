@@ -1,6 +1,6 @@
 section .data
     hello db "Hello, Holberton", 0
-    format db "%s", 0
+    format db "%s", 10, 0 ; 10 represents the new line character
 
 section .text
     extern printf
