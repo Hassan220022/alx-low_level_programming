@@ -1,20 +1,9 @@
-section .data
-    hello db "Hello, Holberton", 0
-    format db "%s", 10, 0 ; 10 represents the new line character
-
-section .text
-    extern printf
-
-global main
+          global    main
+          extern    printf
 main:
-    push rbp
-    mov rbp, rsp
-
-    push hello
-    push format
-    call printf
-    add rsp, 16
-
-    mov eax, 0
-    leave
-    ret
+	  mov   edi, format
+	  xor   eax, eax
+	  call  printf
+	  mov 	eax, 0
+	  ret
+format: db `Hello, Holberton\n`,0
