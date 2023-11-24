@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- * print_binary - prints the binary representation of a number
- * @n: number to print in binary
- *
- * Return: no return
- */
+* print_binary - prints the binary representation of a number
+* @n: number to print in binary
+*
+* Return: no return
+*/
 void print_binary(unsigned long int n)
 {
 	unsigned long int mask = 1;
