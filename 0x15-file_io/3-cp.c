@@ -1,14 +1,27 @@
 #include "main.h"
 
-void error_checking(int is_error, int exit_code, char *message);
+/**
+ * error_checking - checks if an error occurred
+ * @is_error: 1 if an error occurred, 0 otherwise
+ * @exit_code: the exit code to use if an error occurred
+ * @message: the message to print if an error occurred
+ */
+void error_checking(int is_error, int exit_code, char *message)
+{
+	if (is_error)
+	{
+		dprintf(STDERR_FILENO, "%s\n", message);
+		exit(exit_code);
+	}
+}
 
 /**
-* main - copies the content of a file to another file
-* @argc: the number of arguments passed to the program
-* @argv: an array of pointers to the arguments
-*
-* Return: 0 on success
-*/
+ * main - copies the content of a file to another file
+ * @argc: the number of arguments passed to the program
+ * @argv: an array of pointers to the arguments
+ *
+ * Return: 0 on success
+ */
 int main(int argc, char *argv[])
 {
 	int file_from, file_to, read_status, write_status;
@@ -40,19 +53,4 @@ int main(int argc, char *argv[])
 	error_checking(close(file_to) < 0, 100, "Error: Can't close fd ");
 
 	return (0);
-}
-
-/**
-* error_checking - checks if an error occurred
-* @is_error: 1 if an error occurred, 0 otherwise
-* @exit_code: the exit code to use if an error occurred
-* @message: the message to print if an error occurred
-*/
-void error_checking(int is_error, int exit_code, char *message)
-{
-	if (is_error)
-	{
-		dprintf(STDERR_FILENO, "%s\n", message);
-		exit(exit_code);
-	}
 }
