@@ -1,4 +1,9 @@
 #include "lists.h"
+#include "0-print_dlistint.c"
+#include "2-add_dnodeint.c"
+#include "3-add_dnodeint_end.c"
+#include "4-free_dlistint.c"
+
 /**
  * insert_dnodeint_at_index - Insert a node in the postion
  * @h: Pointer to direction of the head
