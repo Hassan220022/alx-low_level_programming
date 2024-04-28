@@ -1,14 +1,31 @@
-CC = gcc
-SRC = main.c school.c
-OBJ = $(patsubst %.c,%.o,$(SRC))
-NAME = school
-CFLAGS = -Wall -Werror -Wextra -pedantic
-.PHONY : all clean oclean fclean re
-all : m.h $(OBJ)
-    $(CC) $(OBJ) -o $(NAME)
-clean :
-    $(RM) *~ $(NAME)
-oclean :
-    $(RM) $(OBJ)
-fclean : clean oclean
-re : oclean all
+# Compiler and executable variables
+NAME := school
+SRC := main.c school.c
+
+# Default rule
+all: $(NAME)
+
+# Link the program
+$(NAME): $(SRC) m.h
+	gcc -Wall -Werror -Wextra -pedantic $(SRC) -o $(NAME)
+
+# Phony targets for cleaning up
+.PHONY: clean oclean fclean re
+
+# Clean up emacs and vim temporary files and the executable
+clean:
+	@echo "Cleaning up..."
+	rm -f *~ $(NAME)
+
+# Clean up object files
+oclean:
+	@echo "Removing object files..."
+	rm -f *.o
+
+# Fully clean the directory
+fclean: clean oclean
+	@echo "Fully cleaning the directory..."
+
+# Rebuild the project
+re: fclean all
+	@echo "Rebuilding the project..."
