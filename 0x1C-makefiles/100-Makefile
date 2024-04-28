@@ -1,12 +1,9 @@
-# Mandatory variables
 NAME := school
 SRC := main.c school.c
 
-# Compiler and flags
 CC := gcc
 CFLAGS := -Wall -Werror -Wextra -pedantic
 
-# Phony targets to ensure correct behavior under various scenarios
 .PHONY: all clean oclean fclean re
 
 all: $(NAME)
@@ -27,5 +24,3 @@ fclean: clean oclean
 
 re: fclean all
 	@echo "Rebuilding the project..."
-
-# The check for m.h is in the prerequisite list for the $(NAME) target to ensure the Makefile fails if m.h is missing
