@@ -1,31 +1,31 @@
-# Compiler and executable variables
+# Mandatory variables
 NAME := school
 SRC := main.c school.c
 
-# Default rule
+# Compiler and flags
+CC := gcc
+CFLAGS := -Wall -Werror -Wextra -pedantic
+
+# Phony targets to ensure correct behavior under various scenarios
+.PHONY: all clean oclean fclean re
+
 all: $(NAME)
 
-# Link the program
 $(NAME): $(SRC) m.h
-	gcc -Wall -Werror -Wextra -pedantic $(SRC) -o $(NAME)
+	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
-# Phony targets for cleaning up
-.PHONY: clean oclean fclean re
-
-# Clean up emacs and vim temporary files and the executable
 clean:
 	@echo "Cleaning up..."
 	rm -f *~ $(NAME)
 
-# Clean up object files
 oclean:
 	@echo "Removing object files..."
 	rm -f *.o
 
-# Fully clean the directory
 fclean: clean oclean
 	@echo "Fully cleaning the directory..."
 
-# Rebuild the project
 re: fclean all
 	@echo "Rebuilding the project..."
+
+# The check for m.h is in the prerequisite list for the $(NAME) target to ensure the Makefile fails if m.h is missing
