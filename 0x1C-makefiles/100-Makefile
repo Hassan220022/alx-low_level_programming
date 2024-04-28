@@ -1,7 +1,6 @@
 NAME = school
 SRC = main.c school.c
 CC = gcc
-RM = rm -f
 .PHONY : all clean oclean fclean re
 CFLAGS = -Wall -Werror -Wextra -pedantic
 OBJ = $(patsubst %.c,%.o,$(SRC))
