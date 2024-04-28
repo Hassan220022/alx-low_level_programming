@@ -7,7 +7,7 @@ OBJ = $(patsubst %.c,%.o,$(SRC))
 all : m.h $(OBJ)
     $(CC) $(OBJ) -o $(NAME)
 clean :
-    $(rm) *~ $(NAME)
+    $(RM) *~ $(NAME)
 oclean :
     rm -f *.o
 fclean : clean oclean
