@@ -1,42 +1,58 @@
 #include "search_algos.h"
+#include <math.h>
+
+/* remember compiling math.h with gcc requires `-lm` */
+
+size_t min(size_t a, size_t b);
 
 /**
- * jump_search - Searches for a value in a sorted array using jump search
- * @array: Pointer to the first element of the array to search in
- * @size: Number of elements in array
- * @value: Value to search for
+ * min - returns the minimum of two size_t values
+ * @a: first value
+ * @b: second value
  *
- * Return: First index where value is located, or -1 if not found
+ * Return: `a` if lower or equal to `b`, `b` otherwise
  */
+size_t min(size_t a, size_t b)
+{
+	return (a <= b ? a : b);
+}
+
+/**
+ * jump_search - searches for a value in a sorted array of integers using
+ * a jump search algorithm
+ * @array: pointer to first element of array to search
+ * @size: number of elements in array
+ * @value: value to search for
+ *
+ * Return: first index containing `value`, or -1 if `value` not found or
+ * `array` is NULL
+ */
+
 int jump_search(int *array, size_t size, int value)
 {
-	size_t jump = sqrt(size);
-	size_t left = 0;
-	size_t right = jump;
+	size_t low, high, jump;
 
-	if (array == NULL)
+	if (!array || size == 0)
 		return (-1);
 
-	while (right < size && array[right] <= value)
+	jump = sqrt(size);
+
+	for (high = 0; high < size && array[high] < value;
+	     low = high, high += jump)
 	{
-		printf("Value checked array[%lu] = [%d]
-", left, array[left]);
-		left = right;
-		right += jump;
+		printf("Value checked array[%lu] = [%d]\n",
+		       high, array[high]);
 	}
 
-	printf("Value found between indexes [%lu] and [%lu]
-", left, right);
+	/* causes 'found' msg even when value not in array */
+	printf("Value found between indexes [%lu] and [%lu]\n", low, high);
 
-	while (left <= right && left < size)
+	for (; low <= min(high, size - 1); low++)
 	{
-		printf("Value checked array[%lu] = [%d]
-", left, array[left]);
-		if (array[left] == value)
-			return (left);
-		left++;
+		printf("Value checked array[%lu] = [%d]\n", low, array[low]);
+		if (array[low] == value)
+			return (low);
 	}
 
 	return (-1);
 }
-
